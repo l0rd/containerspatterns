@@ -1,0 +1,24 @@
+# To build it
+# docker build -t containerslanguages/rust-launcher -f Dockerfile.launcher .
+#
+# To run it
+# docker run -v /var/run/docker.sock:/var/run/docker.sock --rm containerslanguages/rust-launcher start
+FROM alpine
+
+ADD /launcher.sh /app/launcher.sh
+ADD /launcher_funcs.sh /app/launcher_funcs.sh
+
+RUN apk add --no-cache \
+    ca-certificates \
+    curl \
+    openssl
+
+ENV DOCKER_BUCKET get.docker.com
+ENV DOCKER_VERSION 1.6.0
+
+RUN set -x \
+  && curl -sL "https://${DOCKER_BUCKET}/builds/Linux/x86_64/docker-$DOCKER_VERSION" \
+  > /usr/bin/docker; chmod +x /usr/bin/docker
+
+ENTRYPOINT ["/app/launcher.sh"]
+CMD ["start"]
