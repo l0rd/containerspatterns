@@ -859,6 +859,6 @@ template: inverse
 
 ## Thank you
 
-https://containerslanguages.github.io/
+https://l0rd.github.io/containerspatterns
 
 [@hguemar, @mariolet, @mjbright]
