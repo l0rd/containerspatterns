@@ -3,4 +3,4 @@
 	url = https://github.com/emilevauge/tictac
 [submodule "DFD/flask-todolist"]
 	path = DFD/flask-todolist
-	url = git@github.com:polyfunc/flask-todolist.git
+	url = https://github.com/polyfunc/flask-todolist.git
