@@ -59,7 +59,7 @@
       }
       .inverse {
         background: #272822;
-        color: #777872;
+        color: #FBB03B;
         text-shadow: 0 0 20px #333;
       }
       .inverse h1, .inverse h2 {
@@ -137,6 +137,7 @@
         width: 33%;
         height: 92%;
         float: left;
+        padding-top: 2.1em;
       }
       .tc-center-column {
         width: 33%;
@@ -148,6 +149,18 @@
         float: right;
         padding-top: 2.1em;
       }
+      .bottom-bar {
+        color:#fff;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: 20px;
+        padding: .8em;
+        text-align: left;
+        z-index: 1
+      }
+
 
     </style>
   </head>
@@ -159,7 +172,7 @@
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
     <script>
-      var slideshow = remark.create({ sourceUrl: 'dockermeetupnantes-2016-11-29.md'});
+      var slideshow = remark.create({ sourceUrl: 'snowcampio-2018-01-26.md', slideNumberFormat: ''});
     </script>
   </body>
 </html>
