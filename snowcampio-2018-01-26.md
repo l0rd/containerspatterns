@@ -19,25 +19,12 @@ class: center, middle
 
 .bottom-bar[]
 ---
-template: inverse
+
+layout: false
 
 ## Who am I?
 
----
-layout: false
-
-#### Mario Loriedo
-&nbsp;&nbsp;&nbsp;&nbsp;![mario](images/mario-round.png)
-<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Software Engineer @ Red Hat
-<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;![redhat](images/redhat.png)
-<br>
-&emsp;&emsp;&emsp;&emsp;&ensp;OpenShift.io Team
-<br>
-&emsp;&emsp;&emsp;&emsp;&ensp;![osio](images/osio-mini.png)
-<br>
-&emsp;&emsp;&emsp;&emsp;&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;![che](images/che-mini.png)Eclipse Che Maintainer
+![mario](images/whoami.svg)
 
 ---
 
