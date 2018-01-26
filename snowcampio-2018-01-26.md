@@ -114,12 +114,12 @@ template: inverse
 
 **Source code**<br>https://github/l0rd/containerspatterns/MS/
 
-**Build and run command**
+**Run command**
+
 ```bash
-docker build -t 2048 .
 docker run -p 8080:80 \
            -v $(pwd):/usr/local/apache2/htdocs/ \
-           2048
+           httpd
 ```
 ]
 
@@ -475,8 +475,7 @@ template: inverse
 ## SC for PID and FS 
 
 **Docker Images**
-- httpd
-- ubuntu
+httpd and ubuntu
 
 **Source code**<br>https://github/l0rd/containerspatterns/SC
 
