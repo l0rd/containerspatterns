@@ -1,4 +1,5 @@
-# containerspatterns
-Interesting and useful containers usages
+# Containers Patterns
 
-![Periodic Table](images/cp-PeriodicTable.png)
+Different ways to use containers. For fun and profit.
+
+![Periodic Table](images/periodictable.svg)
