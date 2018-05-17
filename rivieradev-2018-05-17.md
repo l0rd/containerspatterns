@@ -133,7 +133,7 @@ docker run -p 8080:80 \
 ]
 .right-column[
 ## Mount Sources
-  ![cp-MS](images/cp-MS.png)
+  ![cp-MS](images/cp-MS.svg)
 ]
 
 ---
@@ -204,7 +204,7 @@ mvn -version
 ]
 .right-column[
 ## Dockerize Your Tools
-.center[![cp-DYT](images/cp-DYT.png)]
+.center[![cp-DYT](images/cp-DYT.svg)]
 ]
 
 ---
@@ -269,7 +269,8 @@ docker run -v $(pwd):/src/ \
 ]
 .right-column[
 ## Containers Launcher
-.center[![cp-CL-1](images/cp-CL-1.svg)]
+<br>
+.center[![cp-CL-1](images/cp-CL1.svg)]
 ]
 
 ---
@@ -284,8 +285,8 @@ docker run -v $(pwd):/src/ \
 ]
 .right-column[
 ## Containers Launcher
-<br><br>
-.center[![cp-CL-2](images/cp-CL-2.svg)]
+<br>
+.center[![cp-CL-2](images/cp-CL2.svg)]
 ]
 
 ---
@@ -300,8 +301,56 @@ docker run -v $(pwd):/src/ \
 ]
 .right-column[
 ## Containers Launcher
-<br><br>
-.center[![cp-CL-3](images/cp-CL-3.svg)]
+<br>
+.center[![cp-CL-3](images/cp-CL3.svg)]
+]
+
+---
+
+.left-column[
+
+  ## MS
+  ## DYT
+## CL  
+  ### Example
+  ### Details
+]
+.right-column[
+## Containers Launcher
+<br>
+.center[![cp-CL-4](images/cp-CL4.svg)]
+]
+
+---
+
+.left-column[
+
+  ## MS
+  ## DYT
+## CL  
+  ### Example
+  ### Details
+]
+.right-column[
+## Containers Launcher
+<br>
+.center[![cp-CL-5](images/cp-CL5.svg)]
+]
+
+---
+
+.left-column[
+
+  ## MS
+  ## DYT
+## CL  
+  ### Example
+  ### Details
+]
+.right-column[
+## Containers Launcher
+<br>
+.center[![cp-CL-6](images/cp-CL6.svg)]
 ]
 
 ---
@@ -548,10 +597,21 @@ layout: false
 ---
 
 layout: false
+
+<br><br><br><br><br>
+.center[
+## [github.com/l0rd/containerspatterns](https://github.com/l0rd/containerspatterns)
+<br>
+## [l0rd.github.io/containerspatterns](https://l0rd.github.io/containerspatterns)
+
+]
+---
+
+layout: false
 .center[
 ## Thank you
   ![dupond-dupont-final](images/dupond-dupont-3.png)
-https://l0rd.github.io/containerspatterns
+  <br><br>@mariolet
 ]
 
 ---
@@ -624,79 +684,6 @@ In this pattern it's particularly important to separate in 2 distinct steps:
 
 template: inverse
 
-## Dockerize Your Tools
-A development pattern
-
----
-
-.left-column[
-.footnote[@hguemar, @mariolet, @mjbright ]
-
-  ## CS
-  ## MS
-## DYT
-  ### Pattern
-]
-.right-column[
-.center[![cp-DYT](images/cp-DYT.png)]
-]
-
----
-
-.left-column[
-.footnote[@hguemar, @mariolet, @mjbright ]
-
-  ## CS
-  ## MS
-## DYT
-  ### Pattern
-]
-.right-column[
-## Dockerize Your Tools
-- Development pattern
-- A tool is packaged and distributed as a Docker image
-- Allow to run multiple versions of the same tool
-- The tool version and installation is described in a Dockerfile
-- Files can be shared between the container and the host with volumes
-- `alias` command can be used to make it easier to run
-]
-
----
-.left-column[
-.footnote[@hguemar, @mariolet, @mjbright ]
-
-  ## CS
-  ## MS
-## DYT
-  ### Pattern
-  ### Example
-]
-.right-column[
-## Dockerize maven
-
-**Docker Image**<br>maven:3.3.3-jdk-8
-
-**Source code**<br>https://github/l0rd/containerspatterns/DYT
-
-**Run command**
-```bash
-# Make the alias of the dockerized tool
-alias mvn="docker run \
-   -v $(pwd):/usr/src \
-   -v ~/.m2:/root/.m2 \
-   -w /usr/src  \
-   maven:3.3.3-jdk-8 \
-   mvn"
-
-# Run the tool
-mvn -version
-```
-]
-
----
-
-template: inverse
-
 ## Docker Socket Mount 
 A runtime pattern
 
@@ -707,7 +694,6 @@ A runtime pattern
 
   ## CS
   ## MS
-  ## DYT
 ## DSM
   ### Pattern
 ]
@@ -723,7 +709,6 @@ A runtime pattern
 
   ## CS
   ## MS
-  ## DYT
 ## DSM
   ### Pattern
 ]
@@ -744,7 +729,6 @@ A runtime pattern
 
   ## CS
   ## MS
-  ## DYT
 ## DSM
   ### Pattern
   ### Example
@@ -777,7 +761,6 @@ A Distribution and runtime pattern
 
   ## ...
   ## DSM
-  ## CL
 ## BFS  
   ### Pattern
 ]
@@ -793,7 +776,6 @@ A Distribution and runtime pattern
 
   ## ...
   ## DSM
-  ## CL
 ## BFS  
   ### Pattern
 ]
@@ -811,7 +793,6 @@ A Distribution and runtime pattern
 
   ## ...
   ## DSM
-  ## CL
 ## BFS  
   ### Pattern
   ### Example
@@ -844,7 +825,6 @@ A runtime pattern
 
   ## ...
   ## BFS
-  ## HS
 ## ECC  
   ### Pattern
 ]
@@ -860,7 +840,6 @@ A runtime pattern
 
   ## ...
   ## BFS
-  ## HS
 ## ECC  
   ### Pattern
 ]
@@ -878,7 +857,6 @@ A runtime pattern
 
   ## ...
   ## BFS
-  ## HS
 ## ECC  
   ### Pattern
   ### Example
@@ -911,7 +889,6 @@ A runtime pattern
 
   ## ...
   ## BFS
-  ## HS
 ## EFE  
   ### Pattern
 ]
@@ -927,7 +904,6 @@ A runtime pattern
 
   ## ...
   ## BFS
-  ## HS
 ## EFE  
   ### Pattern
 ]
@@ -946,7 +922,6 @@ A runtime pattern
 
   ## ...
   ## BFS
-  ## HS
 ## EFE  
   ### Pattern
   ### Example
@@ -983,7 +958,6 @@ A development pattern
 .footnote[@hguemar, @mariolet, @mjbright ]
 
   ## ...
-  ## HS
   ## EFE
 ## OBI  
   ### Pattern
@@ -999,7 +973,6 @@ A development pattern
 .footnote[@hguemar, @mariolet, @mjbright ]
 
   ## ...
-  ## HS
   ## EFE
 ## OBI  
   ### Pattern
@@ -1017,7 +990,6 @@ A development pattern
 .footnote[@hguemar, @mariolet, @mjbright ]
 
   ## ...
-  ## HS
   ## EFE
 ## OBI  
   ### Pattern
@@ -1050,7 +1022,6 @@ A development pattern
 .footnote[@hguemar, @mariolet, @mjbright ]
 
   ## ...
-  ## HS
   ## EFE
 ## DFD  
   ### Pattern
@@ -1065,7 +1036,6 @@ A development pattern
 .footnote[@hguemar, @mariolet, @mjbright ]
 
   ## ...
-  ## HS
   ## EFE
 ## DFD  
   ### Pattern
@@ -1082,7 +1052,6 @@ A development pattern
 .footnote[@hguemar, @mariolet, @mjbright ]
 
   ## ...
-  ## HS
   ## EFE
 ## DFD  
   ### Pattern
