@@ -176,7 +176,7 @@ template: inverse
 
 **Docker Image**<br>maven:3.3.3-jdk-8
 
-**Source code**<br>https://github/l0rd/containerspatterns/DYT
+**Source code**<br>https://github.com/l0rd/containerspatterns/tree/master/DYT
 
 **Run command**
 ```bash
@@ -247,7 +247,7 @@ template: inverse
 
 **Docker Image**<br>containerspatterns/rust-launcher
 
-**Source code**<br>https://github/l0rd/containerspatterns/CL
+**Source code**<br>https://github.com/l0rd/containerspatterns/tree/master/CL
 
 **Run command**
 ```bash
@@ -390,7 +390,7 @@ template: inverse
 
 **Docker Image**<br>alpine
 
-**Source code**<br>https://github/l0rd/containerspatterns/HS
+**Source code**<br>https://github.com/l0rd/containerspatterns/tree/master/HS
 
 **Run command**
 ```bash
@@ -459,7 +459,7 @@ template: inverse
 - maven:3.5-jdk-8 (build)
 - openjdk:8-jre (run)
 
-**Source code**<br>https://github/l0rd/containerspatterns/S2I
+**Source code**<br>https://github.com/l0rd/containerspatterns/tree/master/S2I
 
 **Build command**
 ```bash
@@ -526,7 +526,7 @@ template: inverse
 **Docker Images**
 httpd and ubuntu
 
-**Source code**<br>https://github/l0rd/containerspatterns/SC
+**Source code**<br>https://github.com/l0rd/containerspatterns/tree/master/SC
 
 **Run command**
 
@@ -665,7 +665,7 @@ A development pattern
 ## Copy 2048 ![Docker](images/docker.png)
 **Docker Image**<br>2048
 
-**Source code**<br>https://github/l0rd/containerspatterns/CS/
+**Source code**<br>https://github.com/l0rd/containerspatterns/tree/master/CS/
 
 **Build and run commands**
 ```bash
@@ -738,7 +738,7 @@ A runtime pattern
 
 **Docker Image**<br>containerslanguages/golang
 
-**Source code**<br>https://github/l0rd/containerspatterns/DSM
+**Source code**<br>https://github.com/l0rd/containerspatterns/tree/master/DSM
 
 **Run command**
 ```bash
@@ -866,7 +866,7 @@ A runtime pattern
 
 **Docker Image**<br>ecc
 
-**Source code**<br>https://github/l0rd/containerspatterns/ECC
+**Source code**<br>https://github.com/l0rd/containerspatterns/tree/master/ECC
 
 **Run command**
 ```bash
@@ -931,7 +931,7 @@ A runtime pattern
 
 **Docker Image**<br>httpd
 
-**Source code**<br>https://github/l0rd/containerspatterns/EFE/
+**Source code**<br>https://github.com/l0rd/containerspatterns/tree/master/EFE/
 
 **Build and Run commands**
 ```bash
@@ -1000,7 +1000,7 @@ A development pattern
 
 **Docker Image**<br>obi-java
 
-**Source code**<br>https://github/l0rd/containerspatterns/OBI
+**Source code**<br>https://github.com/l0rd/containerspatterns/tree/master/OBI
 
 **Build/Run commands**
 ```bash
@@ -1062,7 +1062,7 @@ A development pattern
 
 **Docker Image** dfd
 
-**Source code**<br>https://github/l0rd/containerspatterns/dfd
+**Source code**<br>https://github.com/l0rd/containerspatterns/tree/master/dfd
 <br>https://github/polyfunc/flask-todolist
 
 **Build command**
