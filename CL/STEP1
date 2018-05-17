@@ -1,0 +1,5 @@
+#! /bin/bash
+
+echo -n 'docker run -v $(pwd):/src/ \
+        -v /var/run/docker.sock:/var/run/docker.sock \
+        containerspatterns/rust-launcher' | pbcopy

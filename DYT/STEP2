@@ -1,0 +1,8 @@
+#! /bin/bash
+
+echo -n 'alias java="docker run \
+   -v $(pwd):/usr/src \
+   -w /usr/src        \
+   -v ~/.m2:/root/.m2 \
+   openjdk:11-jre-slim \
+   java"' | pbcopy

@@ -20,7 +20,7 @@ fi
 check_mongod_is_fine ${cid}
 
 # Run our application
-cid=$(docker run -d --link ${MONGODB_CONTAINER_NAME}:mongodb containerslanguages/rust)
+cid=$(docker run -d --link ${MONGODB_CONTAINER_NAME}:mongodb containerspatterns/rust-app)
 
 # Wait until it has started
 wait_until_container_is_running ${cid}

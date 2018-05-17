@@ -1,13 +1,20 @@
 # To build it
-# docker build -t containerslanguages/rust .
+# docker build -t containerspatterns/rust .
 #
 # To run it
-# docker run --rm -t --link mongodb containerslanguages/rust
+# docker run --rm -t --link mongodb containerspatterns/rust
 
-FROM scorpil/rust:1.11
+FROM rust:1.26
 
 RUN apt-get update && \
-    apt-get install -y g++ make cmake libuv-dev libssl-dev git
+    apt-get install -y build-essential cmake git libssl-dev git
+
+RUN wget http://dist.libuv.org/dist/v1.14.0/libuv-v1.14.0.tar.gz && \
+    tar xzf libuv-v1.14.0.tar.gz && \
+    cd libuv-v1.14.0 && \
+    sh autogen.sh && \
+    ./configure && \
+    make install
 
 RUN git clone https://github.com/datastax/cpp-driver.git && \
     mkdir cpp-driver/build && \

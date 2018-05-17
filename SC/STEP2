@@ -1,0 +1,5 @@
+#! /bin/bash
+
+echo -n '# Run a sidecar container that updates index.html
+docker run --volumes-from ${cid} -ti --rm ubuntu \
+sh -c "echo I am the sidecar >> /usr/local/apache2/htdocs/index.html"' | pbcopy

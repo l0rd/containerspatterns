@@ -1,0 +1,7 @@
+#! /bin/bash
+
+echo -n '# Run a sidecar container that shares the same PID namespace and kill httpd
+docker run --pid=container:${cid} -ti --rm ubuntu \
+    bash -c "echo -n pid 1 is \$(ps -p 1 -o comm=), killing it...;
+            kill 1;
+            echo done."' | pbcopy

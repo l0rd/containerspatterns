@@ -1,0 +1,8 @@
+#! /bin/bash
+
+echo -n 'alias mvn="docker run \
+   -v $(pwd):/usr/src \
+   -w /usr/src        \
+   -v ~/.m2:/root/.m2 \
+   maven:3.3.3-jdk-8 \
+   mvn"' | pbcopy

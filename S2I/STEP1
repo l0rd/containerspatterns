@@ -1,0 +1,3 @@
+#! /bin/bash
+
+echo -n 'docker build -t s2i .' | pbcopy

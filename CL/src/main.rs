@@ -23,6 +23,8 @@ fn main() {
         coll.insert_one(doc.clone(), None)
             .ok().expect("Failed to insert document.");
 
+        println!("Inserted movie in db");
+
         // Find the document and receive a cursor
         let mut cursor = coll.find(Some(doc.clone()), None)
             .ok().expect("Failed to execute find.");
@@ -32,7 +34,7 @@ fn main() {
         // cursor.next() returns an Option<Result<Document>>
         match item {
             Some(Ok(doc)) => match doc.get("title") {
-                Some(&Bson::String(ref title)) => println!("{}", title),
+                Some(&Bson::String(ref title)) => println!("Fetched movie {} from db", title),
                 _ => panic!("Expected title to be a string!"),
             },
             Some(Err(_)) => panic!("Failed to get next from server!"),

@@ -1,8 +1,8 @@
 # To build it
-# docker build -t containerslanguages/rust-launcher -f Dockerfile.launcher .
+# docker build -t containerspatterns/rust-launcher -f Dockerfile.launcher .
 #
 # To run it
-# docker run -v /var/run/docker.sock:/var/run/docker.sock --rm containerslanguages/rust-launcher start
+# docker run -v /var/run/docker.sock:/var/run/docker.sock --rm containerspatterns/rust-launcher start
 FROM alpine
 
 ADD /launcher.sh /app/launcher.sh
@@ -13,12 +13,18 @@ RUN apk add --no-cache \
     curl \
     openssl
 
-ENV DOCKER_BUCKET get.docker.com
-ENV DOCKER_VERSION 1.6.0
+ENV DOCKER_CHANNEL stable
+ENV DOCKER_VERSION 18.03.1-ce
 
 RUN set -x \
   && curl -sL "https://${DOCKER_BUCKET}/builds/Linux/x86_64/docker-$DOCKER_VERSION" \
   > /usr/bin/docker; chmod +x /usr/bin/docker
+
+RUN curl -fL -o docker.tgz "https://download.docker.com/linux/static/${DOCKER_CHANNEL}/x86_64/docker-${DOCKER_VERSION}.tgz" && \
+      tar --extract \
+          --file docker.tgz \
+          --strip-components 1 \
+          --directory /usr/local/bin/
 
 ENTRYPOINT ["/app/launcher.sh"]
 CMD ["start"]

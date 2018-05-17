@@ -1,0 +1,5 @@
+#! /bin/bash
+
+echo -n '# Run apache httpd in the background
+cid=$(docker run -dit -p 8080:80 \
+      -v /usr/local/apache2/htdocs/ httpd:2.4)' | pbcopy

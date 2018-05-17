@@ -1,0 +1,6 @@
+#! /bin/bash
+
+echo -n 'docker run -d \
+            -p 8080:80 \
+            -v $(pwd)/2048:/usr/local/apache2/htdocs/ \
+            httpd' | pbcopy

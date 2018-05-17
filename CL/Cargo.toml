@@ -3,5 +3,5 @@ name = "sample"
 version = "1.0.0"
 
 [dependencies]
-bson = "*"
-mongodb = "0.1.5"
+bson = "0.10.0"
+mongodb = "0.3.7"
