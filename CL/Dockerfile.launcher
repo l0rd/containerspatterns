@@ -16,10 +16,6 @@ RUN apk add --no-cache \
 ENV DOCKER_CHANNEL stable
 ENV DOCKER_VERSION 18.03.1-ce
 
-RUN set -x \
-  && curl -sL "https://${DOCKER_BUCKET}/builds/Linux/x86_64/docker-$DOCKER_VERSION" \
-  > /usr/bin/docker; chmod +x /usr/bin/docker
-
 RUN curl -fL -o docker.tgz "https://download.docker.com/linux/static/${DOCKER_CHANNEL}/x86_64/docker-${DOCKER_VERSION}.tgz" && \
       tar --extract \
           --file docker.tgz \
